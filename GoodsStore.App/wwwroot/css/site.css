@@ -1,0 +1,105 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    min-height: 900px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 500px;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+
+/* Change input control border color */
+.form-control, .input-group-text {
+    border: 1px solid #0080ff;
+}
+
+a.btn:hover {
+    cursor: pointer !important;
+}
+
+
+/* Modal Popup */
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    height: 40px;
+}
+
+    .modal-header .close {
+        margin-top: -10px;
+    }
+
+.modal-title {
+    margin: 0;
+    line-height: 1px;
+    font-size: 20px;
+}

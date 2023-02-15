@@ -1,0 +1,79 @@
+﻿<div id="_Header">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>				
+				<a class="navbar-brand" asp-area="" asp-controller="Order" asp-action="Carousel" style="font-size:30px;">Gloods Store</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+		
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;">Departments <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Books</a></li>			
+					<li><a href="#">Clothes</a></li>
+					</ul>
+				</li>
+				</ul>
+				<form class="navbar-form navbar-left" asp-action="search" method="get" role="search">
+					<div class="form-group">
+						<input type="text" name="find_desc" placeholder="search for products, brands and more ..." class="form-control col-lg-7" style="width:400px;">
+					</div>
+					<button type="submit" class="btn btn-danger">Search</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					@if (User.Identity.IsAuthenticated)
+                    {	
+						<li class="dropdown" >
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;">Hello @User.Identity.Name! <span class="caret" /></a>
+							<ul class="dropdown-menu">
+								<li><a><h3>Your account</h3></a></li>
+								<li><a href="#"><h5>Manage your account</h5></a></li>
+								<li role="separator" class="divider"></li>
+								<li><a><h3>IAM</h3></a></li>
+								<li><a class="nav-link text-dark display-8" asp-area="" asp-controller="NavigationAccess" asp-action="MenuListAll">Menus</a></li>
+								<li><a href="#"><h5>Modules</h5></a></li>
+								<li><a href="#"><h5>Features</h5></a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<form asp-controller="Account" asp-action="Logout" method="post">
+								<button type="submit" class="btn btn-info" style="height:49px; background-color: black; color:white; border-color:black">
+									<span class="glyphicon glyphicon-log-out"></span> Log out
+								</button>
+							</form>		
+						</li>
+					}
+					else
+					{
+						<li>
+							<form class="navbar-form navbar-right" asp-controller="Account" asp-action="Register">
+								<button type="submit" class="btn btn-info" style="height:49px; background-color: black; color:white; border-color:black">
+									<span class="glyphicon glyphicon-user"></span> Register
+								</button>
+							</form>
+						</li>
+						<li>
+							<form class="navbar-form navbar-right" asp-controller="Account" asp-action="Login">
+								<button type="submit" class="btn btn-info" style="height:49px; background-color: black; color:white; border-color:black">
+									<span class="glyphicon glyphicon-log-in"></span> Log in
+								</button>
+							</form>
+						</li>
+					}
+				</ul>
+			</div><!--/.navbar-collapse -->
+		</div>
+	</nav>
+</div>
+
+
+@section Scripts {
+	 @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

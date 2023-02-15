@@ -1,0 +1,67 @@
+﻿@model Order
+
+<h3>Summary of order</h3>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Order no: @(Model.Id)</h3>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Seus Dados</h3>
+                <div>
+                    @($"{Model.Customer.User.FirstName} {Model.Customer.User.LastName}")</div>
+                <div>@(Model.Customer.User.PhoneNumber)</div>
+            </div>
+            <div class="col-md-3">
+                @(Model.Customer.User.Email)
+            </div>
+            <div class="col-md-6">
+                <h3>Delivery address</h3>
+                <div>@(Model.Customer.Address)</div>
+            </div>
+        </div>
+
+        <hr />
+               
+        <div class="row">
+            <div class="col-md-10 text-left">
+                <h3>Item</h3>
+            </div>
+            <div class="col-md-2 text-center">
+                <h3>Quantity</h3>
+            </div>
+        </div>
+
+        @foreach(var item in Model.Items)
+        {
+            <div class="row">
+                <div class="col-md-10 text-left">
+                    <div>@(item.Product.Name)</div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div>@(item.Quantity)</div>
+                </div>
+            </div>    
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="pull-right">
+            <a class="btn btn-success" asp-controller="order" asp-action="carousel">
+                Keep buying
+            </a>
+            <a class="btn btn-success" 
+                asp-controller="order" 
+                asp-action="payload">
+                Process Payment
+            </a>
+        </div>
+    </div>
+</div>

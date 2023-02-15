@@ -1,0 +1,63 @@
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.left.carousel-control,
+.right.carousel-control {
+    background-image: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.navbar-inverse {
+    background-color: #000000;
+    border-color: white;
+}
+
+.row-center {
+    display: flex;
+    align-items: center;
+}
+
+.img-produto-carrossel {
+    width: 100%;
+}
+
+.img-produto-carrinho {
+    width: 140px;
+    height: 160px;
+    filter: drop-shadow(2px 2px 2px #ccc);
+}
+
+.linha-produto {
+    margin: 20px;
+}
+
+.produto-nome {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.produto-footer {
+    max-height: 140px;
+}
+
+.produto-nome {
+}
