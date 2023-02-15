@@ -7,6 +7,6 @@ Sql Server
 App domain
 
 ## Repository
-(Git)[https://github.com/robertath/webapp-autoscale-dotnet-6-GoodsStore]
+[Git](https://github.com/robertath/webapp-autoscale-dotnet-6-GoodsStore)
 
 
