@@ -9,7 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodsStore.Tests", "GoodsSt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{06F0D621-EF1A-43BC-8ED6-90376D76A5B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailService", "EmailService\EmailService.csproj", "{B2BDE1D2-0C3C-4B37-BE5F-AB07FB21818C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailService", "EmailService\EmailService.csproj", "{B2BDE1D2-0C3C-4B37-BE5F-AB07FB21818C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6FA0B00D-DF48-4FCD-A44A-576F8FB66302}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{C74ED0F7-B748-4FB4-86EB-01054113DA70}"
+	ProjectSection(SolutionItems) = preProject
+		Infra\creates-azure.ps1 = Infra\creates-azure.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

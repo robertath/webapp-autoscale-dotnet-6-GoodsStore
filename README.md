@@ -5,8 +5,46 @@
 Webapp service azure
 Sql Server
 App domain
+App Service Logs
 
 ## Repository
 [Git](https://github.com/robertath/webapp-autoscale-dotnet-6-GoodsStore)
+
+
+## Steps
+
+#### Create webapp
+
+	Infra\creates-azure.ps1
+
+#### App Service Logs
+
+```
+On Azure portal
+App Service created > Monitoring > App Service Logs
+Set on to all that you need and send to storage if want
+```
+
+#### Deploying from Azure portal
+```
+On Azure portal
+App service > Deployment > Deployment Center
+Select `GitHub`
+Select `App Service build service` 
+Select Repository: `webapp-autoscale-dotnet-6-GoodsStore` (git repository)
+Select Branch: `main`
+```
+
+#### Scale slots
+```
+On Azure portal
+App service > Scale up (vertical)
+App service > Scale out (horizontal, add new slots)
+	- Manual scale
+	- Custom Autoscale
+		- Schedule
+		- By metrics
+
+
 
 
